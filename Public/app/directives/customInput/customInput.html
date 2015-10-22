@@ -1,0 +1,15 @@
+﻿<div>
+    <div ng-show="isEditMode">
+        <div class="ci-input" ng-class="{ 'ci-input-error': error!='' }" >
+            <input type="text" ng-model="value" />
+            <span class="ci-inline-validation-text glyphicon glyphicon-warning-sign ci-fg-red" ng-show="error != ''" title="{{error}}"></span>
+        </div>
+        
+        <button id="ci-save" ng-click="saveChanges()" class="btn btn-success">Save</button>
+        <button id="ci-cancel" ng-click="cancelChanges()" class="btn btn-primary">Cancel</button>
+    </div>
+    <div ng-show="!isEditMode">
+        <label id="ci-label" class="ci-label">{{value}}</label>
+        <button id="ci-edit"  ng-click="edit()" class="btn btn-primary">Edit</button>
+    </div>
+</div>

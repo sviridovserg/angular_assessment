@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		.container {
+			margin: 0px 50px 0px 50px;
+		}
+		
+		.stretchHorizontal {
+			width:100%;
+		}
+		
+		.center {
+			text-align:center;
+		}
+	</style>
+</head>
+<body>
+
+<div class="container">
+	<h1>Project Description</h1>
+	<p>
+	Custom Input directive is dedicated to enhance user experience for input data. It turns the input element into read-only 
+	element with a button "Edit" to switch it into edit mode. In edit mode input has two buttons to save and cancel changes.
+	</p>
+	<div>
+		<table class="stretchHorizontal">
+			<tr>
+				<td class="center">
+					<img src="customInput_readonly.png" height="40">
+				</td>
+				<td class="center">
+					<img src="customInput_edit.png" height="40">
+				</td>
+			</tr>
+		</table>
+		
+	</div>
+	<div>
+		<h2>Directive Usage</h2>
+		<p>To use custom input directive add &lt;asmt-custom-input&gt;&lt;/asmt-custom-input&gt; tag to your HMTL markup</p>
+		<h4>Properties:</h4>
+		<ul>
+			<li>
+				<b>ng-model</b> - to bind value that will be shown in input
+			</li>
+			<li>
+				<b>save</b> - to bind callback that will be invoked on save button click
+			</li>
+		</ul>
+	</div>
+	<div>
+		<h2>Changes in Project</h2>
+		<ul>
+			<li>
+				<label>Build</label>
+				<ul>
+					<li>
+						<b>start.bat</b> - grunt command call added to build application before server start
+					</li>
+					<li>
+						<b>packages.json</b> - new packages are added to build application
+					</li>
+					<li>
+						<b>Grunt.js</b> - configuration of build
+					</li>
+					<li>
+						The build script can be enhanced so that it creates folder with content that should be deployed. Index.html page should contain only minified versions of scripts and styles, so developer version of index.html should be created.
+					</li>
+				</ul>
+			</li>
+			<li>
+				<label>Structure</label>
+				<ul>
+					<li>
+						<b>assessmentApp.js</b> - main module and main controller definitions
+					</li>
+					<li>
+						<b>services folder</b> - contains module for services and definitions of services in application
+					</li>
+					<li>
+						<b>directives folder</b> - contains module for directives and definitions of directives in application. Each directive is placed in sub folder with its template and styles.
+					</li>
+					<li>
+						<b>tests folder</b> - contains set of tests for the application. Test can be run via "grunt jasmin:unit" command or via SpecRunner.html
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+</div>
+
+</body>
+</html>

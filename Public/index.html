@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>People</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link href="/CSS/bootstrap.css" type="text/css" rel="stylesheet" />
+    <link href="/CSS/app.dev.css" type="text/css" rel="stylesheet" />
+</head>
+<body ng-app="assessmentApp">
+    
+    <div class="container" ng-controller="PersonController">
+        <h1>
+            Custom Input Directive
+        </h1>
+        <div>
+            <label>Name:</label>
+            <div style="display:inline-block">
+                <asmt-custom-input ng-model="person.fullName" save="savePerson()"></asmt-custom-input>
+            </div>
+        </div>
+    </div>
+
+    <script src="/Scripts/angular.js"></script>
+    <script src="/app.min.js"></script>
+</body>
+</html>
